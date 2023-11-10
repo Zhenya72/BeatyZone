@@ -1,0 +1,29 @@
+.button-carusel {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  fill: $primary_dark;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid $primary_dark;
+  cursor: pointer;
+  position: relative;
+  fill: $primary_dark;
+  display: none;
+  @media screen and (min-width: $bp-tablet) {
+    display: flex;
+  }
+  &:hover {
+    background-color: $primary_medium;
+    border: 1px solid $primary_light;
+    fill: $primary_light;
+  }
+
+  &__svg_size_16 {
+    @include size(16px, 16px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

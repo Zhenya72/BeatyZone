@@ -1,0 +1,51 @@
+.modal {
+  width: 100%;
+  height: 100%;
+  max-width: 723px;
+  max-height: 681px;
+  border-radius: 48px;
+  background: $primary_dark;
+  position: relative;
+  padding: 42px 15px;
+  overflow-y: auto;
+
+  @media screen and (min-width: $bp-mobile) {
+    padding: 42px 54px;
+  }
+  @media screen and (min-width: $bp-tablet) {
+    padding: 42px 144px;
+  }
+
+  &__button {
+    background-color: transparent;
+    color: $primary_light;
+    border: none;
+    font-size: 32px;
+    position: absolute;
+    top: 42px;
+    right: 42px;
+  }
+
+  &__zagolovok {
+    max-width: 435px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  &__parag {
+    margin: 0 auto;
+    max-width: 274px;
+    text-align: center;
+    margin-bottom: 32px;
+    font-weight: 600;
+  }
+
+  &__form {
+    padding: 0 62.5px;
+  }
+
+  &__field_mb_24 {
+    margin-bottom: 24px;
+  }
+}

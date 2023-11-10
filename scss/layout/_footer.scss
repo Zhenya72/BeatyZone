@@ -1,0 +1,133 @@
+.footer {
+  background-color: $primary_dark;
+  padding: 32px 91px 66px 91px;
+  position: relative;
+  overflow: hidden;
+  @media screen and (min-width: $bp-tablet) {
+    padding: 56px 0;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: -61px;
+    right: -31px;
+    background-image: url(../img/oils.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 213px;
+    height: 278px;
+    transform: scaleX(-1);
+    content: "";
+    display: none;
+    @media screen and (min-width: $bp-tablet) {
+      display: block;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    text-align: center;
+    @media screen and (min-width: $bp-tablet) {
+      gap: 20px;
+      flex-direction: row;
+      text-align: left;
+    }
+  }
+
+  &__logo {
+    margin: 0 auto;
+    flex-grow: 1;
+    margin-bottom: 26px;
+    &_img {
+      @include size(57px, 30px);
+      @media screen and (min-width: $bp-tablet) {
+        @include size(83px, 42px);
+      }
+    }
+    @media screen and (min-width: $bp-tablet) {
+      margin: 0;
+    }
+  }
+
+  &__list {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    &_size_16 {
+      font-size: 14px;
+      @media screen and (min-width: $bp-tablet) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__address {
+    flex-grow: 1;
+    display: flex;
+    gap: 20px;
+    font-style: normal;
+    flex-direction: column;
+    justify-content: center;
+    &_size_16 {
+      font-size: 14px;
+      @media screen and (min-width: $bp-tablet) {
+        font-size: 16px;
+      }
+      @media screen and (min-width: $bp-tablet) {
+        gap: 20px;
+        flex-direction: row;
+      }
+    }
+    &_list {
+      flex-grow: 1;
+      display: none;
+      flex-direction: column;
+      gap: 16px;
+      @media screen and (min-width: $bp-tablet) {
+        display: flex;
+      }
+    }
+  }
+
+  &__svg {
+    justify-content: center;
+    margin-top: 0;
+    display: flex;
+    gap: 24px;
+    &_size_42 {
+      @include size(32px, 32px);
+      @media screen and (min-width: $bp-tablet) {
+        @include size(42px, 42px);
+      }
+    }
+    @media screen and (min-width: $bp-tablet) {
+      margin-top: 16px;
+      justify-content: flex-start;
+    }
+  }
+
+  &__confon {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    &_size_16 {
+      font-size: 14px;
+      @media screen and (min-width: $bp-tablet) {
+        font-size: 16px;
+      }
+    }
+    &_size_13 {
+      font-size: 12px;
+      @media screen and (min-width: $bp-tablet) {
+        font-size: 13px;
+      }
+    }
+    &_color {
+      color: $secondary_two;
+    }
+  }
+}

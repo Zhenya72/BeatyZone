@@ -1,0 +1,186 @@
+.header {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  background-image: linear-gradient(
+      89deg,
+      #fff 30.62%,
+      rgba(255, 255, 255, 0.85) 41.31%,
+      rgba(255, 255, 255, 0.19) 58.65%,
+      rgba(255, 255, 255, 0) 72.78%
+    ),
+    url(../img/bg-women@0.5x.jpg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  z-index: 10;
+
+  @media screen and (min-width: $bp-mobile) {
+    background-image: linear-gradient(
+        89deg,
+        #fff 30.62%,
+        rgba(255, 255, 255, 0.85) 41.31%,
+        rgba(255, 255, 255, 0.19) 58.65%,
+        rgba(255, 255, 255, 0) 72.78%
+      ),
+      url(../img/bg-women@0.75x.jpg);
+  }
+  @media screen and (min-width: $bp-tablet) {
+    background-image: linear-gradient(
+        89deg,
+        #fff 30.62%,
+        rgba(255, 255, 255, 0.85) 41.31%,
+        rgba(255, 255, 255, 0.19) 58.65%,
+        rgba(255, 255, 255, 0) 72.78%
+      ),
+      url(../img/bg-women.jpg);
+  }
+
+  &__blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $header_color;
+    backdrop-filter: blur(5px);
+    background-image: linear-gradient(
+      89deg,
+      #fff 30.62%,
+      rgba(255, 255, 255, 0.85) 41.31%,
+      rgba(255, 255, 255, 0.19) 58.65%,
+      rgba(255, 255, 255, 0) 72.78%
+    );
+    height: 110.5px;
+    width: 100%;
+    z-index: -10;
+    display: none;
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+    }
+  }
+
+  &__menu {
+    padding: 16px 0;
+    @media screen and (min-width: $bp-desktop) {
+      padding: 32px 0;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__logo {
+    @include size(57px, 30px);
+    @media screen and (min-width: $bp-mobile) {
+      @include size(74px, 42px);
+    }
+  }
+
+  &__list {
+    display: none;
+    flex-direction: row;
+    gap: 56px;
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+    }
+  }
+
+  &__address {
+    display: none;
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  &__svg_size_32 {
+    @include size(32px, 32px);
+  }
+
+  &__main-conteiner {
+    padding: 25px 0 56px 0;
+    @media screen and (min-width: $bp-mobile) {
+      padding: 17px 0 74px 56px;
+    }
+    @media screen and (min-width: $bp-tablet) {
+      padding: 17px 0 127px 106px;
+    }
+  }
+
+  &__main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 330px;
+    margin: 0 auto;
+    @media screen and (min-width: $bp-mobile) {
+      max-width: 529px;
+      align-items: flex-start;
+      margin: 0;
+    }
+  }
+
+  &__zagolovok {
+    color: $primary_medium;
+    font-size: 54px;
+    line-height: 0.8;
+    margin-bottom: 32px;
+    text-align: center;
+    @media screen and (min-width: $bp-mobile) {
+      font-size: 96px;
+      text-align: left;
+    }
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 140px;
+      margin-bottom: 40px;
+    }
+  }
+  &__parag_one {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 1.5;
+
+    @media screen and (min-width: $bp-mobile) {
+      font-size: 18px;
+      line-height: normal;
+      margin-bottom: 16px;
+    }
+  }
+  &__button {
+    margin-bottom: 8px;
+    @media screen and (min-width: $bp-mobile) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__parag_two {
+    color: $secondary_one;
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.5;
+    max-width: 186px;
+    @media screen and (min-width: $bp-mobile) {
+      max-width: 238px;
+      font-size: 12px;
+    }
+  }
+
+  &__burger-menu {
+    display: block;
+    border: none;
+    background-color: transparent;
+    @include size(24px, 24px);
+    @media screen and (min-width: $bp-desktop) {
+      display: none;
+    }
+  }
+}

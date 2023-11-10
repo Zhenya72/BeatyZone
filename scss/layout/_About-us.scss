@@ -1,0 +1,121 @@
+.About-us {
+  padding-bottom: 52px;
+  position: relative;
+  @media screen and (min-width: $bp-mobile) {
+    padding-bottom: 88px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 90%;
+    right: 20%;
+    background-image: url(../img/Star_mobile.svg);
+    background-repeat: no-repeat;
+    @include size(40px, 40px);
+    animation: rotate-center 1s infinite linear 2.5s;
+    @media screen and (min-width: $bp-desktop) {
+      background-image: url(../img/Star1.svg);
+      @include size(64px, 64px);
+      top: 335px;
+      right: 395px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media screen and (min-width: $bp-mobile) {
+      gap: 28px;
+    }
+  }
+
+  &__conteiner-text {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    max-width: 320px;
+    flex-grow: 1;
+
+    @media screen and (min-width: $bp-mobile) {
+      gap: 40px;
+      max-width: 709px;
+    }
+    @media screen and (min-width: $bp-tablet) {
+      margin-top: 40px;
+    }
+  }
+
+  &__zagolovok {
+    max-width: 264px;
+    margin-bottom: 8px;
+    @media screen and (min-width: $bp-mobile) {
+      margin-bottom: 0;
+      max-width: 529px;
+    }
+  }
+
+  &__text_weight_600 {
+    font-weight: 600;
+  }
+
+  &__conteiner-img {
+    flex-direction: column;
+    gap: 40px;
+    flex-grow: 1;
+    position: relative;
+    display: none;
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      animation: rotate-center 1s infinite linear 2.5s;
+      display: none;
+      @media screen and (min-width: $bp-desktop) {
+        display: block;
+      }
+    }
+
+    &::before {
+      top: 33px;
+      right: 0;
+      background-image: url(../img/Star2.svg);
+      width: 40px;
+      height: 40px;
+    }
+
+    &::after {
+      top: 270px;
+      right: 14px;
+      background-image: url(../img/Star3.svg);
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__reincarnate_before,
+  &__reincarnate_after {
+    border-radius: 50%;
+  }
+
+  &__reincarnate_before {
+    width: 335px;
+    height: 328px;
+  }
+
+  &__reincarnate_after {
+    width: 343px;
+    height: 328px;
+    align-self: flex-end;
+  }
+}

@@ -1,0 +1,8 @@
+.link {
+  text-decoration: none;
+  transition: color 0.2s, fill 0.2s;
+  &:hover {
+    color: $primary_medium;
+    fill: $primary_medium;
+  }
+}
